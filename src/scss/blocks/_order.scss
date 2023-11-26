@@ -8,22 +8,6 @@
 		top: 0;
 		left: 0;
 		object-fit: cover;
-
-		@media (max-width: calc($fullscreen - 1px)) {
-			height: 100vh;
-		}
-
-		@media (max-width: $tablet) {
-			height: 92vh;
-		}
-
-		@media (max-width: $mobile) {
-			height: 161vh;
-		}
-
-		@media (max-width: $mobile-sm) {
-			height: 153vh;
-		}
 	}
 
 	&__container {

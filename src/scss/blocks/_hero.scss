@@ -8,23 +8,6 @@
 		z-index: -1;
 		object-fit: cover;
 		max-width: unset;
-
-		@media (max-width: calc($fullscreen - 1px)) {
-			max-width: 100%;
-			height: 100vh;
-		}
-
-		@media (max-width: $tablet) {
-			height: 80vh;
-		}
-
-		@media (max-width: $mobile) {
-			height: 69vh;
-		}
-
-		@media (max-width: $mobile-sm) {
-			height: 51vh;
-		}
 	}
 
 	&__container {
