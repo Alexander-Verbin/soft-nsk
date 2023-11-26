@@ -1,7 +1,7 @@
 export const _customSelectFn = () => {
 	const selects = document.querySelectorAll(".select");
 
-	if (selects.length) {
+	if (selects.length > 0) {
 		selects.forEach((select) => {
 			const head = select.querySelector(".select__control");
 			const arrow = select.querySelector(".select__arrow");
