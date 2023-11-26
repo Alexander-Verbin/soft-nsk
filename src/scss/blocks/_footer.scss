@@ -1,0 +1,74 @@
+.footer {
+	background-color: var(--footer);
+	&__container {
+		padding-block: clamp(px-to-rem(15), 3vw, px-to-rem(28));
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: px-to-rem(10);
+
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__block {
+		&:not(:first-child) {
+			display: flex;
+			align-items: center;
+			gap: clamp(px-to-rem(5), 2vw, px-to-rem(38));
+			transform: translateX(px-to-rem(-3));
+			-webkit-transform: translateX(px-to-rem(-3));
+			-moz-transform: translateX(px-to-rem(-3));
+			-ms-transform: translateX(px-to-rem(-3));
+			-o-transform: translateX(px-to-rem(-3));
+
+			@media (max-width: calc($fullscreen - 1px)) {
+				transform: unset;
+				-webkit-transform: unset;
+				-moz-transform: unset;
+				-ms-transform: unset;
+				-o-transform: unset;
+			}
+
+			&::before {
+				content: "";
+				width: px-to-rem(1);
+				height: px-to-rem(18);
+				background-color: var(--footer-grey-text);
+
+				@media (max-width: $tablet) {
+					all: unset;
+				}
+			}
+		}
+	}
+
+	&__info {
+		color: var(--white);
+		display: flex;
+		align-items: center;
+		gap: px-to-rem(10);
+
+		&--block {
+			display: block;
+		}
+
+		&--link {
+			@include transition(var(--0-3s));
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					color: var(--content-blue);
+				}
+			}
+		}
+	}
+
+	&__info-text {
+		color: var(--footer-grey-text);
+	}
+}

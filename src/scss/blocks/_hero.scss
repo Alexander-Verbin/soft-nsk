@@ -1,0 +1,73 @@
+.hero {
+	position: relative;
+
+	&__background {
+		position: absolute;
+		top: calc(var(--header-height) * -1);
+		left: 0;
+		z-index: -1;
+		object-fit: cover;
+
+		@media (max-width: calc($fullscreen - 1px)) {
+			height: 100vh;
+		}
+
+		@media (max-width: $tablet) {
+			height: 80vh;
+		}
+
+		@media (max-width: $mobile) {
+			height: 69vh;
+		}
+
+		@media (max-width: $mobile-sm) {
+			height: 51vh;
+		}
+	}
+
+	&__container {
+		padding-block-start: clamp(px-to-rem(30), 10vw, px-to-rem(103));
+		padding-block-end: clamp(px-to-rem(30), 10vw, px-to-rem(198));
+	}
+
+	&__title {
+		color: var(--black);
+	}
+
+	&__subtitle {
+		color: var(--black);
+	}
+
+	&__benefits {
+		margin-block-start: clamp(px-to-rem(20), 5vw, px-to-rem(92));
+	}
+
+	&__list {
+		padding-inline-start: px-to-rem(10);
+		margin-block-start: px-to-rem(10);
+	}
+
+	&__item {
+		color: var(--black);
+		padding-inline-start: px-to-rem(10);
+		&:not(:first-child) {
+			margin-block-start: px-to-rem(5);
+		}
+		&::marker {
+			content: "-";
+		}
+	}
+
+	&__links {
+		margin-block-start: clamp(px-to-rem(20), 5vw, px-to-rem(80));
+		display: flex;
+		align-items: center;
+		gap: clamp(px-to-rem(10), 3vw, px-to-rem(30));
+	}
+
+	&__link {
+		display: block;
+		white-space: nowrap;
+		flex: 0 0 max(px-to-rem(120), 15.6%);
+	}
+}

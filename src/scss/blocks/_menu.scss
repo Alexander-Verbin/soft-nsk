@@ -1,0 +1,26 @@
+.menu {
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: clamp(px-to-rem(20), 3vw, px-to-rem(60));
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			justify-content: center;
+			padding-block-start: px-to-rem(100);
+		}
+	}
+
+	&__link {
+		color: var(--white);
+		@include transition(var(--0-3s));
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				color: var(--header-blue);
+			}
+		}
+		&--active {
+			color: var(--header-blue);
+		}
+	}
+}
